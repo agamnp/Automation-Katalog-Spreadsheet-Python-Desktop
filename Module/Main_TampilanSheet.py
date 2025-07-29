@@ -208,6 +208,103 @@ def create_named_range_from_sheet_name(spreadsheet_id, sheet, header_row=9, col_
     print(msg)
     logging.info(msg)
 
+def atur_format_sheet(sheet, spreadsheet_id):
+    try:
+        creds = Credentials.from_service_account_file(
+            os.getenv("GOOGLE_CREDS_PATH"),
+            scopes=["https://www.googleapis.com/auth/spreadsheets"]
+        )
+        service = build('sheets', 'v4', credentials=creds)
+
+        sheet_id = sheet._properties['sheetId']
+        ukuranKolom = [
+            44, 119, 369, 129, 127, 134, 124, 125, 109, 109,
+            100, 100, 100, 100, 100, 100, 100, 100, 100, 100,
+            100, 100, 100, 100, 150, 80, 115, 266
+        ]
+
+        requests = []
+
+        # Atur lebar kolom
+        for i, width in enumerate(ukuranKolom):
+            requests.append({
+                "updateDimensionProperties": {
+                    "range": {
+                        "sheetId": sheet_id,
+                        "dimension": "COLUMNS",
+                        "startIndex": i,
+                        "endIndex": i + 1
+                    },
+                    "properties": {"pixelSize": width},
+                    "fields": "pixelSize"
+                }
+            })
+
+        # Alignment dan format angka untuk beberapa range (J4 dan G3:G4)
+        requests.append({
+            "repeatCell": {
+                "range": {
+                    "sheetId": sheet_id,
+                    "startRowIndex": 3,
+                    "endRowIndex": 4,
+                    "startColumnIndex": 9,
+                    "endColumnIndex": 10
+                },
+                "cell": {
+                    "userEnteredFormat": {
+                        "numberFormat": {
+                            "type": "CURRENCY",
+                            "pattern": '[$Rp-421] #,##0'
+                        },
+                        "horizontalAlignment": "RIGHT"
+                    }
+                },
+                "fields": "userEnteredFormat(numberFormat,horizontalAlignment)"
+            }
+        })
+
+        requests.append({
+            "repeatCell": {
+                "range": {
+                    "sheetId": sheet_id,
+                    "startRowIndex": 2,
+                    "endRowIndex": 3,
+                    "startColumnIndex": 6,
+                    "endColumnIndex": 7
+                },
+                "cell": {
+                    "userEnteredFormat": {
+                        "numberFormat": {
+                            "type": "CURRENCY",
+                            "pattern": '[$Rp-421] #,##0'
+                        },
+                        "horizontalAlignment": "RIGHT"
+                    }
+                },
+                "fields": "userEnteredFormat(numberFormat,horizontalAlignment)"
+            }
+        })
+
+
+
+
+
+        # Kirim semua request
+        service.spreadsheets().batchUpdate(
+            spreadsheetId=spreadsheet_id,
+            body={"requests": requests}
+        ).execute()
+
+        print("🧾 Format tampilan sheet berhasil diterapkan.")
+        logging.info("🧾 Format tampilan sheet berhasil diterapkan.")
+    except Exception as e:
+        print(f"⚠️ Gagal mengatur format sheet: {e}")
+        logging.error(f"Gagal mengatur format sheet: {e}")
+   
+
+
+    
+
 
 # Fungsi utama
 def main_tampilan_sheet(logger=print):
@@ -273,6 +370,9 @@ def main_tampilan_sheet(logger=print):
         ensure_filter_and_freeze(sheet)
         # Tambahkan rumus rekap
         add_formulas(sheet)
+
+        # Tambahkan format tampilan sheet
+        atur_format_sheet(sheet, spreadsheet_id=sh.id)
 
         # 🔁 Tambah named range dari nama sheet (bersih)
         create_named_range_from_sheet_name(
