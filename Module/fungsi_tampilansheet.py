@@ -10,6 +10,7 @@ import logging
 from globals import get_stop_requested, set_stop_requested
 
 
+
 # Konfigurasi logging
 logging.basicConfig(
     filename="log_proses_katalog.txt",  # Nama file log
@@ -386,7 +387,8 @@ def main_tampilan_sheet(logger=print):
     try:
         logger("📄 Menjalankan tampilan sheet...")
         spreadsheet_name = "automasi katalog"
-        excluded_sheets = ["Form Pengadaan", "Hasil Seleksi", "Referensi"]
+        excluded_sheets = os.getenv("EXCLUDED_SHEETS", "")
+        excluded_sheets = [s.strip() for s in excluded_sheets.split(",") if s.strip()]  
         Sheet_mulai = 1
         START_SHEET_INDEX = Sheet_mulai + 2
         START_ROW = 10
@@ -406,7 +408,6 @@ def main_tampilan_sheet(logger=print):
                 break
 
             if sheet.title in excluded_sheets:
-                
                 logger(msg = f"➡️ Sheet '{sheet.title}' dilewati.")
                 continue
 

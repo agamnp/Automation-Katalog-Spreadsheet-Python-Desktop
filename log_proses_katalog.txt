@@ -1041,3 +1041,72 @@
 2025-07-30 11:57:37 [INFO] file_cache is only supported with oauth2client<4.0.0
 2025-07-30 11:57:43 [INFO] \U0001f3f7\ufe0f Named range 'BudiUtamaCVDeepublish' Range \u2192 '1.Budi Utama CV (Deepublish)'!J10:J5145
 2025-07-30 11:57:43 [INFO] \U0001f3af Proses sheet '1.Budi Utama CV (Deepublish)' selesai.
+2025-07-30 14:22:59 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-30 14:23:53 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-30 14:24:07 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-30 14:29:37 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-30 14:33:50 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-30 14:37:17 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-30 14:39:29 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-30 14:44:18 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-30 14:47:38 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-30 14:49:00 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-30 14:52:06 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-30 14:55:06 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-30 14:58:57 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-30 15:01:21 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-30 15:03:18 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-30 15:09:02 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-30 15:10:14 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-30 15:17:35 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-30 15:19:15 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-30 15:19:51 [INFO] \U0001f524 Rename     : '2.Buka Buku Pustaka' \u2192 '1.Buka Buku Pustaka'
+2025-07-30 15:19:58 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-30 15:20:01 [INFO] \u2705 Format border dan alignment berhasil diterapkan.
+2025-07-30 15:20:01 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-30 15:20:06 [INFO] \U0001f3f7\ufe0f Named range 'BukaBukuPustaka' Range \u2192 '1.Buka Buku Pustaka'!J10:J10
+2025-07-30 15:20:06 [INFO] \U0001f524 Rename     : '3.BUMI AKSARA PT' \u2192 '2.BUMI AKSARA PT'
+2025-07-30 15:20:12 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-30 15:20:15 [INFO] \u2705 Format border dan alignment berhasil diterapkan.
+2025-07-30 15:20:15 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-30 15:20:21 [INFO] \U0001f3f7\ufe0f Named range 'BUMIAKSARAPT' Range \u2192 '2.BUMI AKSARA PT'!J10:J10
+2025-07-30 15:20:21 [INFO] \U0001f524 Rename     : '4.Cahaya Duabelas Semesta PT' \u2192 '3.Cahaya Duabelas Semesta PT'
+2025-07-30 15:20:27 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-30 15:20:30 [INFO] \u2705 Format border dan alignment berhasil diterapkan.
+2025-07-30 15:20:30 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-30 15:20:35 [INFO] \U0001f3f7\ufe0f Named range 'CahayaDuabelasSemestaPT' Range \u2192 '3.Cahaya Duabelas Semesta PT'!J10:J10
+2025-07-30 15:20:36 [INFO] \U0001f524 Rename     : '5.Citra Aditya Bakti PT' \u2192 '4.Citra Aditya Bakti PT'
+2025-07-30 15:20:42 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-30 15:20:45 [INFO] \u2705 Format border dan alignment berhasil diterapkan.
+2025-07-30 15:20:45 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-30 15:20:50 [INFO] \U0001f3f7\ufe0f Named range 'CitraAdityaBaktiPT' Range \u2192 '4.Citra Aditya Bakti PT'!J10:J10
+2025-07-30 15:29:46 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-30 15:39:57 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-30 15:40:00 [INFO] \u2705 Format border dan alignment berhasil diterapkan.
+2025-07-30 15:40:00 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-30 15:40:05 [INFO] \U0001f3f7\ufe0f Named range 'BukaBukuPustaka' Range \u2192 '1.Buka Buku Pustaka'!J10:J10
+2025-07-30 15:49:22 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-30 15:49:25 [INFO] \u2705 Format border dan alignment berhasil diterapkan.
+2025-07-30 15:49:25 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-30 15:49:30 [INFO] \U0001f3f7\ufe0f Named range 'BukaBukuPustaka' Range \u2192 '1.Buka Buku Pustaka'!J10:J10
+2025-07-30 15:49:35 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-30 15:49:38 [INFO] \u2705 Format border dan alignment berhasil diterapkan.
+2025-07-30 15:49:38 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-30 15:49:43 [INFO] \U0001f3f7\ufe0f Named range 'BUMIAKSARAPT' Range \u2192 '2.BUMI AKSARA PT'!J10:J10
+2025-07-30 15:51:47 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-30 15:51:50 [INFO] \u2705 Format border dan alignment berhasil diterapkan.
+2025-07-30 15:51:50 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-30 15:51:55 [INFO] \U0001f3f7\ufe0f Named range 'BukaBukuPustaka' Range \u2192 '1.Buka Buku Pustaka'!J10:J10
+2025-07-30 15:52:01 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-30 15:52:05 [INFO] \u2705 Format border dan alignment berhasil diterapkan.
+2025-07-30 15:52:05 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-30 15:52:10 [INFO] \U0001f3f7\ufe0f Named range 'BUMIAKSARAPT' Range \u2192 '2.BUMI AKSARA PT'!J10:J10
+2025-07-30 15:52:16 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-30 15:52:20 [INFO] \u2705 Format border dan alignment berhasil diterapkan.
+2025-07-30 15:52:20 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-30 15:52:25 [INFO] \U0001f3f7\ufe0f Named range 'CahayaDuabelasSemestaPT' Range \u2192 '3.Cahaya Duabelas Semesta PT'!J10:J10
+2025-07-30 15:52:30 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-30 15:52:33 [INFO] \u2705 Format border dan alignment berhasil diterapkan.
+2025-07-30 15:52:33 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-30 15:52:38 [INFO] \U0001f3f7\ufe0f Named range 'CitraAdityaBaktiPT' Range \u2192 '4.Citra Aditya Bakti PT'!J10:J10
+2025-07-30 15:53:38 [INFO] file_cache is only supported with oauth2client<4.0.0

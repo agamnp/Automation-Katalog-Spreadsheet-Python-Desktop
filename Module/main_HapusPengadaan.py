@@ -1,72 +1,49 @@
-import pandas as pd
-from tkinter import filedialog
-import gspread
-from google.oauth2.service_account import Credentials
-from dotenv import load_dotenv
-import os
-import time
+import tkinter as tk
+from tkinter import scrolledtext
+import threading
+from Module import fungsi_hapuspengadaan  # nama file kamu (tanpa .py), pastikan sesuai
 
+def show_window(root):
+    def run_hapus_pengadaan():
+        text_log.configure(state="normal")
+        text_log.delete(1.0, tk.END)
+        text_log.configure(state="disabled")
 
-def setup_google_sheets():
-    load_dotenv()
-    creds_path = os.getenv("GOOGLE_CREDS_PATH")
-    creds = Credentials.from_service_account_file(
-    creds_path,
-    scopes=[
-        "https://www.googleapis.com/auth/spreadsheets",
-        "https://www.googleapis.com/auth/drive"
-    ]
-)
-    return gspread.authorize(creds)
+        def logger(msg):
+            text_log.configure(state="normal")
+            text_log.insert(tk.END, msg + "\n")
+            text_log.see(tk.END)
+            text_log.configure(state="disabled")
 
+        def target():
+            try:
+                fungsi_hapuspengadaan.main_hapus_pengadaan(logger=logger)
+            finally:
+                run_button.config(state="normal")
 
-def main_hapus_pengadaan(logger=print):
-    logger("📤 Silakan pilih file Excel (.xlsx) yang berisi data penghapusan...")
-    file_path = filedialog.askopenfilename(
-        filetypes=[("Excel files", "*.xlsx *.xls")]
-    )
-    if not file_path:
-        logger("❌ Tidak ada file dipilih. Proses dibatalkan.")
-        return
+        threading.Thread(target=target).start()
+        run_button.config(state="disabled")
 
-    df = pd.read_excel(file_path)
-    logger(f"✅ File dibaca: {file_path}")
-    logger(f"🔍 Jumlah data: {len(df)}")
+    # Buat window baru
+    window = tk.Toplevel()
+    window.title("🗑️ Hapus Data Pengadaan")
+    window.geometry("700x400")
+    window.configure(bg="white")
+    root.withdraw()
 
-    gc = setup_google_sheets()
-    spreadsheet_name = "automasi katalog"
-    sh = gc.open(spreadsheet_name)
-    sheet = sh.worksheet("Form Pengadaan")
+    def on_close():
+        window.destroy()
+        root.deiconify()
 
-    all_data = sheet.get_all_values()
-    headers = all_data[0]
-    rows = all_data[1:]
+    window.protocol("WM_DELETE_WINDOW", on_close)
 
-    deleted_count = 0
+    title = tk.Label(window, text="🗑️ Hapus Data Pengadaan", font=("Helvetica", 16, "bold"), bg="white")
+    title.pack(pady=10)
 
-    for index, row_excel in df.iterrows():
-        uuid = str(row_excel.get("UUID", "")).strip()
-        judul = str(row_excel.get("Judul", "")).strip().lower()
-        isbn = str(row_excel.get("ISBN Cetak", "")).strip()
-        isbn_e = str(row_excel.get("ISBN Elektronik", "")).strip()
+    global run_button
+    run_button = tk.Button(window, text="🔍 Pilih File & Hapus", bg="#B22222", fg="white", font=("Helvetica", 12), command=run_hapus_pengadaan)
+    run_button.pack(pady=10)
 
-        for i, row_sheet in enumerate(rows):
-            row_judul = row_sheet[1].strip().lower()
-            row_isbn = row_sheet[2].strip()
-            row_isbn_e = row_sheet[3].strip()
-            row_uuid = row_sheet[4].strip()
-
-            if (
-                uuid and uuid == row_uuid
-                or judul and judul == row_judul
-                or isbn and isbn == row_isbn
-                or isbn_e and isbn_e == row_isbn_e
-            ):
-                real_row_number = i + 2  # offset karena header di baris 1
-                sheet.delete_row(real_row_number)
-                logger(f"🗑️ Baris {real_row_number} dihapus: {row_sheet[1]}")
-                deleted_count += 1
-                time.sleep(1)
-                break  # hanya hapus satu baris yang cocok
-
-    logger(f"🎯 Total baris dihapus: {deleted_count}")
+    text_log = scrolledtext.ScrolledText(window, wrap=tk.WORD, height=15)
+    text_log.pack(fill=tk.BOTH, expand=True, padx=10, pady=10)
+    text_log.configure(state="disabled")
