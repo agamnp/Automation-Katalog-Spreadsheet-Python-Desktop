@@ -386,6 +386,7 @@ def atur_border_dan_format_sheet(sheet, spreadsheet_id):
 def main_tampilan_sheet(logger=print):
     try:
         logger("📄 Menjalankan tampilan sheet...")
+        
         spreadsheet_name = "automasi katalog"
         excluded_sheets = os.getenv("EXCLUDED_SHEETS", "")
         excluded_sheets = [s.strip() for s in excluded_sheets.split(",") if s.strip()]  
