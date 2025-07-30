@@ -920,3 +920,124 @@
 2025-07-30 00:09:31 [INFO] \u2705 Memproses Sheet: 1.Budi Utama CV (Deepublish)
 2025-07-30 00:09:34 [INFO] \u2705 Nomor urut di kolom A selesai
 2025-07-30 00:09:39 [INFO] \u2705 Kolom B diisi hyperlink
+2025-07-30 11:45:51 [INFO] \u2705 Memproses Sheet: 1.Budi Utama CV (Deepublish)
+2025-07-30 11:45:55 [INFO] \u2705 Nomor urut di kolom A selesai
+2025-07-30 11:46:03 [INFO] \u2705 Kolom B diisi hyperlink
+2025-07-30 11:46:06 [INFO] \u2705 Kolom AA dihitung dari Y*Z
+2025-07-30 11:46:08 [INFO] \U0001f50d Filter     : A9:AB9
+2025-07-30 11:46:09 [INFO] \u2744\ufe0f  Freeze     : Baris 9, Kolom J
+2025-07-30 11:46:10 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-30 11:46:15 [INFO] \u2705 Format border dan alignment berhasil diterapkan.
+2025-07-30 11:46:15 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-30 11:46:22 [INFO] \U0001f3f7\ufe0f Named range 'BudiUtamaCVDeepublish' Range \u2192 '1.Budi Utama CV (Deepublish)'!J10:J5145
+2025-07-30 11:46:22 [INFO] \U0001f3af Proses sheet '1.Budi Utama CV (Deepublish)' selesai.
+2025-07-30 11:46:22 [INFO] \u2705 Memproses Sheet: 2.Buka Buku Pustaka
+2025-07-30 11:46:24 [INFO] \u2705 Nomor urut di kolom A selesai
+2025-07-30 11:46:28 [INFO] \u2705 Kolom B diisi hyperlink
+2025-07-30 11:46:30 [INFO] \u2705 Kolom AA dihitung dari Y*Z
+2025-07-30 11:46:32 [INFO] \U0001f50d Filter     : A9:AB9
+2025-07-30 11:46:32 [INFO] \u2744\ufe0f  Freeze     : Baris 9, Kolom J
+2025-07-30 11:46:33 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-30 11:46:36 [INFO] \u2705 Format border dan alignment berhasil diterapkan.
+2025-07-30 11:46:36 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-30 11:46:42 [INFO] \U0001f3f7\ufe0f Named range 'BukaBukuPustaka' Range \u2192 '2.Buka Buku Pustaka'!J10:J1367
+2025-07-30 11:46:42 [INFO] \U0001f3af Proses sheet '2.Buka Buku Pustaka' selesai.
+2025-07-30 11:46:42 [INFO] \u2705 Memproses Sheet: 3.BUMI AKSARA PT
+2025-07-30 11:46:44 [INFO] \u2705 Nomor urut di kolom A selesai
+2025-07-30 11:46:47 [INFO] \u2705 Kolom B diisi hyperlink
+2025-07-30 11:46:49 [INFO] \u2705 Kolom AA dihitung dari Y*Z
+2025-07-30 11:46:50 [INFO] \U0001f50d Filter     : A9:AB9
+2025-07-30 11:46:51 [INFO] \u2744\ufe0f  Freeze     : Baris 9, Kolom J
+2025-07-30 11:46:52 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-30 11:46:56 [INFO] \u2705 Format border dan alignment berhasil diterapkan.
+2025-07-30 11:46:56 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-30 11:47:02 [INFO] \U0001f3f7\ufe0f Named range 'BUMIAKSARAPT' Range \u2192 '3.BUMI AKSARA PT'!J10:J845
+2025-07-30 11:47:02 [INFO] \U0001f3af Proses sheet '3.BUMI AKSARA PT' selesai.
+2025-07-30 11:47:02 [INFO] \u2705 Memproses Sheet: 4.Cahaya Duabelas Semesta PT
+2025-07-30 11:47:06 [INFO] \u2705 Nomor urut di kolom A selesai
+2025-07-30 11:47:16 [INFO] \u2705 Kolom B diisi hyperlink
+2025-07-30 11:47:18 [INFO] \u2705 Kolom AA dihitung dari Y*Z
+2025-07-30 11:47:20 [INFO] \U0001f50d Filter     : A9:AB9
+2025-07-30 11:47:21 [INFO] \u2744\ufe0f  Freeze     : Baris 9, Kolom J
+2025-07-30 11:47:21 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-30 11:47:25 [INFO] \u2705 Format border dan alignment berhasil diterapkan.
+2025-07-30 11:47:25 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-30 11:47:31 [INFO] \U0001f3f7\ufe0f Named range 'CahayaDuabelasSemestaPT' Range \u2192 '4.Cahaya Duabelas Semesta PT'!J10:J274
+2025-07-30 11:47:31 [INFO] \U0001f3af Proses sheet '4.Cahaya Duabelas Semesta PT' selesai.
+2025-07-30 11:47:31 [INFO] \u2705 Memproses Sheet: 5.Citra Aditya Bakti PT
+2025-07-30 11:47:33 [INFO] \u2705 Nomor urut di kolom A selesai
+2025-07-30 11:47:35 [INFO] \u2705 Kolom B diisi hyperlink
+2025-07-30 11:47:37 [INFO] \u2705 Kolom AA dihitung dari Y*Z
+2025-07-30 11:47:38 [INFO] \U0001f50d Filter     : A9:AB9
+2025-07-30 11:47:38 [INFO] \u2744\ufe0f  Freeze     : Baris 9, Kolom J
+2025-07-30 11:47:39 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-30 11:47:43 [INFO] \u2705 Format border dan alignment berhasil diterapkan.
+2025-07-30 11:47:43 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-30 11:47:50 [INFO] \U0001f3f7\ufe0f Named range 'CitraAdityaBaktiPT' Range \u2192 '5.Citra Aditya Bakti PT'!J10:J83
+2025-07-30 11:47:50 [INFO] \U0001f3af Proses sheet '5.Citra Aditya Bakti PT' selesai.
+2025-07-30 11:47:51 [INFO] \u2705 Memproses Sheet: 6.Delta Edukasi Prima CV
+2025-07-30 11:47:53 [INFO] \u2705 Nomor urut di kolom A selesai
+2025-07-30 11:47:55 [INFO] \u2705 Kolom B diisi hyperlink
+2025-07-30 11:47:57 [INFO] \u2705 Kolom AA dihitung dari Y*Z
+2025-07-30 11:47:58 [INFO] \U0001f50d Filter     : A9:AB9
+2025-07-30 11:47:58 [INFO] \u2744\ufe0f  Freeze     : Baris 9, Kolom J
+2025-07-30 11:47:59 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-30 11:48:05 [INFO] \u2705 Format border dan alignment berhasil diterapkan.
+2025-07-30 11:48:05 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-30 11:48:12 [INFO] \U0001f3f7\ufe0f Named range 'DeltaEdukasiPrimaCV' Range \u2192 '6.Delta Edukasi Prima CV'!J10:J62
+2025-07-30 11:48:12 [INFO] \U0001f3af Proses sheet '6.Delta Edukasi Prima CV' selesai.
+2025-07-30 11:48:12 [INFO] \u2705 Memproses Sheet: 7.DIANDRA PRIMAMITRA MEDIA CV
+2025-07-30 11:48:14 [INFO] \u2705 Nomor urut di kolom A selesai
+2025-07-30 11:48:16 [INFO] \u2705 Kolom B diisi hyperlink
+2025-07-30 11:48:19 [INFO] \u2705 Kolom AA dihitung dari Y*Z
+2025-07-30 11:48:20 [INFO] \U0001f50d Filter     : A9:AB9
+2025-07-30 11:48:20 [INFO] \u2744\ufe0f  Freeze     : Baris 9, Kolom J
+2025-07-30 11:48:21 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-30 11:48:25 [INFO] \u2705 Format border dan alignment berhasil diterapkan.
+2025-07-30 11:48:25 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-30 11:48:31 [INFO] \U0001f3f7\ufe0f Named range 'DIANDRAPRIMAMITRAMEDIACV' Range \u2192 '7.DIANDRA PRIMAMITRA MEDIA CV'!J10:J781
+2025-07-30 11:48:31 [INFO] \U0001f3af Proses sheet '7.DIANDRA PRIMAMITRA MEDIA CV' selesai.
+2025-07-30 11:48:31 [INFO] \u2705 Memproses Sheet: 8.Dunia Pustaka Jaya PT
+2025-07-30 11:48:33 [INFO] \u2705 Nomor urut di kolom A selesai
+2025-07-30 11:48:36 [INFO] \u2705 Kolom B diisi hyperlink
+2025-07-30 11:48:38 [INFO] \u2705 Kolom AA dihitung dari Y*Z
+2025-07-30 11:48:39 [INFO] \U0001f50d Filter     : A9:AB9
+2025-07-30 11:48:40 [INFO] \u2744\ufe0f  Freeze     : Baris 9, Kolom J
+2025-07-30 11:48:41 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-30 11:48:47 [INFO] \u2705 Format border dan alignment berhasil diterapkan.
+2025-07-30 11:48:47 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-30 11:48:54 [INFO] \U0001f3f7\ufe0f Named range 'DuniaPustakaJayaPT' Range \u2192 '8.Dunia Pustaka Jaya PT'!J10:J1064
+2025-07-30 11:48:54 [INFO] \U0001f3af Proses sheet '8.Dunia Pustaka Jaya PT' selesai.
+2025-07-30 11:48:54 [INFO] \u2705 Memproses Sheet: 9.Duta Pustaka Indonesia PT
+2025-07-30 11:48:56 [INFO] \u2705 Nomor urut di kolom A selesai
+2025-07-30 11:48:58 [INFO] \u2705 Kolom B diisi hyperlink
+2025-07-30 11:48:59 [INFO] \u2705 Kolom AA dihitung dari Y*Z
+2025-07-30 11:49:01 [INFO] \U0001f50d Filter     : A9:AB9
+2025-07-30 11:49:02 [INFO] \u2744\ufe0f  Freeze     : Baris 9, Kolom J
+2025-07-30 11:49:03 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-30 11:49:06 [INFO] \u2705 Format border dan alignment berhasil diterapkan.
+2025-07-30 11:49:06 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-30 11:49:12 [INFO] \U0001f3f7\ufe0f Named range 'DutaPustakaIndonesiaPT' Range \u2192 '9.Duta Pustaka Indonesia PT'!J10:J123
+2025-07-30 11:49:12 [INFO] \U0001f3af Proses sheet '9.Duta Pustaka Indonesia PT' selesai.
+2025-07-30 11:49:12 [INFO] \u2705 Memproses Sheet: 10.Elementa Media Literasi PT
+2025-07-30 11:49:14 [INFO] \u2705 Nomor urut di kolom A selesai
+2025-07-30 11:49:17 [INFO] \u2705 Kolom B diisi hyperlink
+2025-07-30 11:49:19 [INFO] \u2705 Kolom AA dihitung dari Y*Z
+2025-07-30 11:49:21 [INFO] \U0001f50d Filter     : A9:AB9
+2025-07-30 11:49:21 [INFO] \u2744\ufe0f  Freeze     : Baris 9, Kolom J
+2025-07-30 11:49:22 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-30 11:49:26 [INFO] \u2705 Format border dan alignment berhasil diterapkan.
+2025-07-30 11:49:26 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-30 11:49:33 [INFO] \U0001f3f7\ufe0f Named range 'ElementaMediaLiterasiPT' Range \u2192 '10.Elementa Media Literasi PT'!J10:J1486
+2025-07-30 11:49:33 [INFO] \U0001f3af Proses sheet '10.Elementa Media Literasi PT' selesai.
+2025-07-30 11:57:19 [INFO] \u2705 Memproses Sheet: 1.Budi Utama CV (Deepublish)
+2025-07-30 11:57:21 [INFO] \u2705 Nomor urut di kolom A selesai
+2025-07-30 11:57:27 [INFO] \u2705 Kolom B diisi hyperlink
+2025-07-30 11:57:30 [INFO] \u2705 Kolom AA dihitung dari Y*Z
+2025-07-30 11:57:31 [INFO] \U0001f50d Filter     : A9:AB9
+2025-07-30 11:57:32 [INFO] \u2744\ufe0f  Freeze     : Baris 9, Kolom J
+2025-07-30 11:57:33 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-30 11:57:37 [INFO] \u2705 Format border dan alignment berhasil diterapkan.
+2025-07-30 11:57:37 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-30 11:57:43 [INFO] \U0001f3f7\ufe0f Named range 'BudiUtamaCVDeepublish' Range \u2192 '1.Budi Utama CV (Deepublish)'!J10:J5145
+2025-07-30 11:57:43 [INFO] \U0001f3af Proses sheet '1.Budi Utama CV (Deepublish)' selesai.

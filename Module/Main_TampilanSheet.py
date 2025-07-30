@@ -2,7 +2,7 @@ import tkinter as tk
 from tkinter import ttk, scrolledtext
 import threading
 
-from globals import set_stop_requested
+from globals import get_stop_requested, set_stop_requested
 from Module import fungsi_tampilansheet  # pastikan path-nya sesuai
 
 def center_window(root, width=600, height=400):

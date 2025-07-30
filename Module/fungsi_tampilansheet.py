@@ -7,7 +7,7 @@ from googleapiclient.discovery import build
 from gspread.utils import a1_range_to_grid_range, rowcol_to_a1
 import re
 import logging
-from globals import stop_requested
+from globals import get_stop_requested, set_stop_requested
 
 
 # Konfigurasi logging
@@ -61,7 +61,7 @@ def autofill_column_general(
         )
     except Exception as e:
         print(f"⚠️ Gagal mengisi kolom {col_letter}: {e}")
-    time.sleep(1)  # Hindari over-quota
+    time.sleep(min(2, num_rows * 0.02))  # 20ms per baris, max 2s
 
 
 # Tambahkan rumus rekap
@@ -118,7 +118,7 @@ def add_formulas(sheet, retries=3):
 
 
 # tambahkan filter
-def ensure_filter_and_freeze(sheet):
+def ensure_filter_and_freeze(sheet,logger=print):
     try:
         # Cari jumlah kolom dari baris header (baris 9)
         header_values = sheet.row_values(9)
@@ -131,15 +131,13 @@ def ensure_filter_and_freeze(sheet):
         filter_range = f"A9:{last_col_letter}9"
         # Set filter dinamis
         sheet.set_basic_filter(filter_range)
-        msg = f"🔍 Filter     : {filter_range}"
-        print(msg)
-        logging.info(msg)
+        logger(f"🔍 Filter     : {filter_range}")
+        
+        
         # Set freeze ke baris 9 dan kolom 10 (kolom J)
         sheet.freeze(rows=9, cols=10)
-
-        msg = f"❄️  Freeze     : Baris 9, Kolom J"
-        print(msg)
-        logging.info(msg)
+        logger(f"❄️  Freeze     : Baris 9, Kolom J")
+        
     except Exception as e:
         print(f"⚠️  Gagal mengatur filter/freeze: {e}")
 
@@ -396,39 +394,32 @@ def main_tampilan_sheet(logger=print):
         sh = gc.open(spreadsheet_name)
         worksheets = sh.worksheets()
 
-        msg = f"🔄 Mulai proses semua sheet...\n"
-        print(msg)
-        logger(msg)
+        
+        logger(f"🔄 Mulai proses semua sheet...\n")
 
         sheet_number = Sheet_mulai if Sheet_mulai > 0 else 1
 
         for i, sheet in enumerate(worksheets[START_SHEET_INDEX:], start=START_SHEET_INDEX):
 
-            if stop_requested:
-                msg = "⏹️ Proses dihentikan oleh pengguna."
-                print(msg)
-                logger(msg)
+            if get_stop_requested():
+                logger("⏹️ Proses dihentikan oleh pengguna.")
                 break
 
             if sheet.title in excluded_sheets:
-                msg = f"➡️ Sheet '{sheet.title}' dilewati."
-                print(msg)
-                logger(msg)
+                
+                logger(msg = f"➡️ Sheet '{sheet.title}' dilewati.")
                 continue
 
             sheet, new_title = rename_sheet_with_number(sh, sheet, sheet_number)
             sheet_number += 1
 
-            msg = f"✅ Memproses Sheet: {new_title}"
-            print(msg)
-            logging.info(msg)
-            logger(msg)
+            
+            logger(f"✅ Memproses Sheet: {new_title}")
 
             autofill_column_general(sheet, "A", START_ROW, "", mode="number")
-            msg = "✅ Nomor urut di kolom A selesai"
-            print(msg)
-            logging.info(msg)
-            logger(msg)
+        
+            logger("✅ Nomor urut di kolom A selesai")
+            
 
             autofill_column_general(
                 sheet,
@@ -437,18 +428,16 @@ def main_tampilan_sheet(logger=print):
                 '=HYPERLINK("https://mocostore.moco.co.id/catalog/"&AB{row};"Klik Disini")',
                 mode="dynamic",
             )
-            msg = "✅ Kolom B diisi hyperlink"
-            print(msg)
-            logging.info(msg)
-            logger(msg)
+            
+            logger("✅ Kolom B diisi hyperlink")
+            
 
             autofill_column_general(
                 sheet, "AA", START_ROW, "=Y{row}*Z{row}", mode="dynamic"
             )
-            msg = f"✅ Kolom AA dihitung dari Y*Z"
-            print(msg)
-            logging.info(msg)
-            logger(msg)
+            
+            logger(f"✅ Kolom AA dihitung dari Y*Z")
+            
 
             ensure_filter_and_freeze(sheet)
             add_formulas(sheet)
@@ -458,11 +447,8 @@ def main_tampilan_sheet(logger=print):
                 spreadsheet_id=sh.id, sheet=sheet, header_row=10, col_start="J", col_end="J"
             )
 
-            msg = f"🎯 Proses sheet '{new_title}' selesai."
-            print(msg)
-            logging.info(msg)
-            logger(msg)
-            print("")
+            
+            logger(f"🎯 Proses sheet '{new_title}' selesai.")
             logger("")
 
         print("🎉 Semua sheet selesai diproses!")
