@@ -9,6 +9,7 @@ __pycache__/
 .env
 Credentials.json
 log_proses_katalog.txt
+Template automasi katalog.xlsx
 
 
 # Distribution / packaging
