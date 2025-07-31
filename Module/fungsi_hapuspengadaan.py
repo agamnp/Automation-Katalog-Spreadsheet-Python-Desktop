@@ -8,7 +8,9 @@ from tkinter import filedialog
 
 # Fungsi bantu untuk aman konversi string
 def safe_str(val):
-    return str(val).strip() if pd.notna(val) else ""
+    if pd.notna(val):
+        return str(val).strip().replace("-", "").replace(" ", "")
+    return ""
 
 # Setup credentials Google Sheets API
 def setup_sheets_api():
@@ -93,12 +95,14 @@ def main_hapus_pengadaan(logger=print):
         headers = all_data[8]
         rows = all_data[9:]
         header_map = {h.strip().lower(): i for i, h in enumerate(headers)}
-        required_cols = ["judul*", "isbn cetak", "isbn elektronik*", "uuid"]
+        required_cols = [
+           # "judul*",
+            "isbn cetak", "isbn elektronik*", "uuid"]
         if not all(col in header_map for col in required_cols):
             logger(f"⚠️ Sheet '{title}' tidak memiliki semua kolom penting. Dilewati.")
             continue
 
-        idx_judul = header_map["judul*"]
+     #   idx_judul = header_map["judul*"]
         idx_isbn = header_map["isbn cetak"]
         idx_isbn_e = header_map["isbn elektronik*"]
         idx_uuid = header_map["uuid"]
@@ -107,13 +111,13 @@ def main_hapus_pengadaan(logger=print):
 
         for index, row_excel in df.iterrows():
             uuid = safe_str(row_excel.get("UUID"))
-            judul = safe_str(row_excel.get("Judul*")).lower()
+        #    judul = safe_str(row_excel.get("Judul*")).lower()
             isbn = safe_str(row_excel.get("ISBN Cetak")).lower()
             isbn_e = safe_str(row_excel.get("ISBN Elektronik*")).lower()
 
             for i, row_sheet in enumerate(rows):
                 try:
-                    row_judul = safe_str(row_sheet[idx_judul]).lower()
+             #       row_judul = safe_str(row_sheet[idx_judul]).lower()
                     row_isbn = safe_str(row_sheet[idx_isbn]).lower()
                     row_isbn_e = safe_str(row_sheet[idx_isbn_e]).lower()
                     row_uuid = safe_str(row_sheet[idx_uuid])
@@ -122,11 +126,12 @@ def main_hapus_pengadaan(logger=print):
 
                 if (
                     (uuid and uuid == row_uuid)
-                    or (judul and judul == row_judul)
+                #    or (judul and judul == row_judul)
                     or (isbn and isbn == row_isbn)
                     or (isbn_e and isbn_e == row_isbn_e)
                 ):
-                    logger(f"🔍 Match: UUID='{uuid}', Judul='{judul}' di sheet '{title}'")
+                   # logger(f"🔍 Match: UUID='{uuid}', Judul='{judul}' di sheet '{title}'")
+                    logger(f"🔍 Match: UUID='{uuid}' di sheet '{title}'")
                     real_row_number = i + 10
                     rows_to_delete.append(real_row_number)
                     break  # keluar dari loop sheet, lanjut ke baris Excel berikutnya

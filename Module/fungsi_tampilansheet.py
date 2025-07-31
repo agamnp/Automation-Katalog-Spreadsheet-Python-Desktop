@@ -387,7 +387,7 @@ def main_tampilan_sheet(logger=print):
     try:
         logger("📄 Menjalankan tampilan sheet...")
         
-        spreadsheet_name = "automasi katalog"
+        spreadsheet_name = "Katalog ebook Validasi Siap Jual Untuk SMKN 2 MAGELANG (EDOO) ( 30 Juli 2025 )"
         excluded_sheets = os.getenv("EXCLUDED_SHEETS", "")
         excluded_sheets = [s.strip() for s in excluded_sheets.split(",") if s.strip()]  
         Sheet_mulai = 1
