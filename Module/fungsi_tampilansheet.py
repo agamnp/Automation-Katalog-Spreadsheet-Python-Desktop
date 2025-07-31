@@ -19,6 +19,8 @@ logging.basicConfig(
     datefmt="%Y-%m-%d %H:%M:%S",
 )
 
+from dotenv import load_dotenv
+load_dotenv(dotenv_path="C:/Users/praaayogi/Documents/GitHub/Automation-Katalog-Spreadsheet-Python-Desktop/.env")
 
 # Setup autentikasi
 # Load environment variables dari .env file
@@ -198,6 +200,7 @@ def create_named_range_from_sheet_name(
     service = build("sheets", "v4", credentials=creds)
 
     spreadsheet = service.spreadsheets().get(spreadsheetId=spreadsheet_id).execute()
+    
     sheet_id = next(
         (
             s["properties"]["sheetId"]
@@ -386,21 +389,26 @@ def atur_border_dan_format_sheet(sheet, spreadsheet_id):
 def main_tampilan_sheet(logger=print):
     try:
         logger("📄 Menjalankan tampilan sheet...")
-        
-        spreadsheet_name = "Katalog ebook Validasi Siap Jual Untuk SMKN 2 MAGELANG (EDOO) ( 30 Juli 2025 )"
+        SPREADSHEET_NAME = os.getenv("SPREADSHEET_NAME", "")
+        SPREADSHEET_ID = os.getenv("SPREADSHEET_ID", "")
+        if not SPREADSHEET_ID:
+            logger("❌ SPREADSHEET_ID tidak ditemukan.")
+            return
+    
         excluded_sheets = os.getenv("EXCLUDED_SHEETS", "")
         excluded_sheets = [s.strip() for s in excluded_sheets.split(",") if s.strip()]  
-        Sheet_mulai = 1
-        START_SHEET_INDEX = Sheet_mulai + 2
+        SHEET_MULAI = int(os.getenv("SHEET_MULAI", "1"))
+        START_SHEET_INDEX = SHEET_MULAI + 2
         START_ROW = 10
         gc = setup_google_sheets()
-        sh = gc.open(spreadsheet_name)
+        sh = gc.open_by_key(SPREADSHEET_ID)
         worksheets = sh.worksheets()
 
         
         logger(f"🔄 Mulai proses semua sheet...\n")
+        logger(f"📂 Nama Spreadsheet: {sh.title}")
 
-        sheet_number = Sheet_mulai if Sheet_mulai > 0 else 1
+        sheet_number = SHEET_MULAI if SHEET_MULAI > 0 else 1
 
         for i, sheet in enumerate(worksheets[START_SHEET_INDEX:], start=START_SHEET_INDEX):
 

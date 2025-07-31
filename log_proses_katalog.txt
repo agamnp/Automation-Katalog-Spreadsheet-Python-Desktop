@@ -1113,3 +1113,31 @@
 2025-07-30 16:04:31 [INFO] file_cache is only supported with oauth2client<4.0.0
 2025-07-30 16:14:10 [INFO] file_cache is only supported with oauth2client<4.0.0
 2025-07-31 07:41:15 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-31 08:38:34 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-31 08:38:37 [INFO] \u2705 Format border dan alignment berhasil diterapkan.
+2025-07-31 08:38:37 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-31 08:38:45 [INFO] \U0001f3f7\ufe0f Named range 'AlqaprintJatinangor' Range \u2192 '1.Alqaprint Jatinangor'!J10:J164
+2025-07-31 08:38:56 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-31 08:39:00 [INFO] \u2705 Format border dan alignment berhasil diterapkan.
+2025-07-31 08:39:00 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-31 08:39:07 [INFO] \U0001f3f7\ufe0f Named range 'AlumniPT' Range \u2192 '2.Alumni PT'!J10:J97
+2025-07-31 08:39:20 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-31 08:39:23 [INFO] \u2705 Format border dan alignment berhasil diterapkan.
+2025-07-31 08:39:23 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-31 08:39:30 [INFO] \U0001f3f7\ufe0f Named range 'AnantaVidyaCV' Range \u2192 '3.Ananta Vidya CV'!J10:J236
+2025-07-31 08:39:46 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-31 08:39:50 [INFO] \u2705 Format border dan alignment berhasil diterapkan.
+2025-07-31 08:39:50 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-31 08:39:59 [INFO] \U0001f3f7\ufe0f Named range 'AndiOffsetCV' Range \u2192 '4.Andi Offset CV'!J10:J4484
+2025-07-31 08:40:13 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-31 08:40:16 [INFO] \u2705 Format border dan alignment berhasil diterapkan.
+2025-07-31 08:40:16 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-31 08:40:23 [INFO] \U0001f3f7\ufe0f Named range 'BalaiPustakaPT' Range \u2192 '5.Balai Pustaka PT'!J10:J247
+2025-07-31 08:40:36 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-31 08:40:39 [INFO] \u2705 Format border dan alignment berhasil diterapkan.
+2025-07-31 08:40:39 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-31 08:40:46 [INFO] \U0001f3f7\ufe0f Named range 'BestariBuanaMurniGroupPT' Range \u2192 '6.Bestari Buana Murni Group PT'!J10:J779
+2025-07-31 08:40:59 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-31 08:41:03 [INFO] \u2705 Format border dan alignment berhasil diterapkan.
+2025-07-31 08:41:03 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-07-31 08:41:10 [INFO] \U0001f3f7\ufe0f Named range 'BintangSemestaMediaCV' Range \u2192 '7.Bintang Semesta Media CV'!J10:J615
