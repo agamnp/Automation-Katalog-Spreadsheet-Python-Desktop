@@ -108,6 +108,34 @@ def add_formulas(sheet, retries=3):
     else:
         logging.error("❌ Gagal menambahkan rumus rekap setelah beberapa percobaan")
 
+def clear_rows_after_table(sheet, data_col="C", start_row=10, logger=print):
+    """Hapus baris kosong setelah data terakhir di tabel"""
+    try:
+        # Cari baris terakhir yang ada data
+        col_values = sheet.col_values(ord(data_col.upper()) - 64)  # Convert C->3
+        last_data_row = len(col_values)
+        
+        # Cek total baris di sheet
+        sheet_rows = sheet.row_count
+        
+        if last_data_row < sheet_rows:
+            # Ada baris kosong yang perlu dihapus
+            rows_to_delete = sheet_rows - last_data_row
+            
+            # Hapus baris kosong (dari baris terakhir data + 1)
+            sheet.delete_rows(last_data_row + 1, sheet_rows)
+            
+            msg = f"🗑️ Dihapus {rows_to_delete} baris kosong setelah baris {last_data_row}"
+            logger(msg)
+            logging.info(msg)
+        else:
+            logger("✅ Tidak ada baris kosong untuk dihapus")
+            
+    except Exception as e:
+        error_msg = f"⚠️ Gagal menghapus baris kosong: {e}"
+        logger(error_msg)
+        logging.error(error_msg)
+
 def ensure_filter_and_freeze(sheet, logger=print):
     """Setup filter dan freeze panes"""
     try:
@@ -410,6 +438,7 @@ def main_tampilan_sheet(logger=print):
             logger("✅ Kolom AA dihitung dari Y*Z")
 
             # Apply formatting and features
+            clear_rows_after_table(sheet, data_col="C", logger=logger)
             ensure_filter_and_freeze(sheet, logger)
             add_formulas(sheet)
             atur_border_dan_format_sheet(sheet, spreadsheet_id=sh.id)
