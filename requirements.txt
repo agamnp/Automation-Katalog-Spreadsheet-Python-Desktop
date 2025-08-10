@@ -12,12 +12,12 @@ et_xmlfile==2.0.0
 fastapi==0.116.1
 Flask==3.1.1
 google-api-core==2.25.1
-google-api-python-client==2.177.0
-google-auth==2.40.3
-google-auth-httplib2==0.2.0
-google-auth-oauthlib==1.2.2
+google-api-python-client>=2.100.0
+google-auth>=2.23.0
+google-auth-httplib2>=0.1.1
+google-auth-oauthlib>=1.1.0
 googleapis-common-protos==1.70.0
-gspread==6.2.1
+gspread>=5.12.0
 gspread-formatting==1.2.1
 h11==0.16.0
 httplib2==0.22.0
@@ -42,7 +42,7 @@ pydantic==2.11.7
 pydantic_core==2.33.2
 pyparsing==3.2.3
 python-dateutil==2.9.0.post0
-python-dotenv==1.1.1
+python-dotenv>=1.0.0
 pytz==2025.2
 requests==2.32.4
 requests-oauthlib==2.0.0
