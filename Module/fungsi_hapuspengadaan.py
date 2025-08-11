@@ -61,9 +61,11 @@ def main_hapus_pengadaan(logger=print):
     df = pd.read_excel(file_path)
     logger(f"✅ File dibaca: {file_path}")
     logger(f"🔍 Jumlah data: {len(df)}")
+    
 
     service = setup_sheets_api()
     spreadsheet_id = os.getenv("SPREADSHEET_ID")
+    logger(f"📂 Nama Spreadsheet: {spreadsheet_id.title}")
     if not spreadsheet_id:
         logger("❌ SPREADSHEET_ID tidak ditemukan di environment.")
         return
